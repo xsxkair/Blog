@@ -1,3 +1,2 @@
-node_modules/
-content/.vuepress/theme/
-content/.vuepress/dist/
+node_modules
+dist
