@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>VuePress</title>
+    <meta name="generator" content="VuePress 1.4.1">
+    
+    <meta name="description" content="">
+    <link rel="preload" href="/assets/css/0.styles.3fe10b44.css" as="style"><link rel="preload" href="/assets/js/app.bb8efc33.js" as="script"><link rel="preload" href="/assets/js/2.d04aa783.js" as="script"><link rel="preload" href="/assets/js/6.83ab510a.js" as="script"><link rel="prefetch" href="/assets/js/3.8891ec0f.js"><link rel="prefetch" href="/assets/js/4.ead3f473.js"><link rel="prefetch" href="/assets/js/5.c777e0de.js"><link rel="prefetch" href="/assets/js/7.29175595.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3fe10b44.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vuepress-初体验"><a href="#vuepress-初体验" class="header-anchor">#</a> <center>vuepress 初体验</center></h1> <h1 id="初次安装使用"><a href="#初次安装使用" class="header-anchor">#</a> 初次安装使用</h1> <h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <ul><li><p>确认<strong>nodejs</strong>版本，版本大于8才可使用！</p> <p><code>node -v</code></p></li> <li><p>安装<strong>yarn</strong></p> <p><code>node install -g yarn</code></p></li> <li><p>修改<strong>yarn</strong>镜像为淘宝镜像</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>#查看当前镜像
+yarn config <span class="token keyword">get</span> registry
+
+#设置为淘宝镜像
+yarn config <span class="token keyword">set</span> registry https<span class="token operator">:</span><span class="token operator">/</span><span class="token regex">/registry.npm.taobao.org/</span>
+</code></pre></div></li> <li><p>安装 <strong>vuepress</strong></p> <p><code>yarn global add vuepress</code></p></li> <li><p>进入到写作目录，新建<strong>README.md</strong>，随便写点东西</p></li> <li><p>构建静态文件</p> <p><code>vuepress build .</code></p></li> <li><p>此时即可打开终端显示的网址访问网站</p></li></ul> <h2 id="问题"><a href="#问题" class="header-anchor">#</a> 问题</h2> <h3 id="_1，yarn全局安装vuepress后在终端无法使用：找不到内部或外部"><a href="#_1，yarn全局安装vuepress后在终端无法使用：找不到内部或外部" class="header-anchor">#</a> 1，<em>yarn</em>全局安装<em>vuepress</em>后在终端无法使用：找不到内部或外部</h3> <div class="language- extra-class"><pre class="language-text"><code>#查看yarn安装目录，命令如下，将路径添加到环境变量中
+yarn global bin
+D:\Program Files\nodejs\node_global\bin
+</code></pre></div><h3 id="_2，vuepress命令无法使用：文件名，目录名或卷标语法不正确"><a href="#_2，vuepress命令无法使用：文件名，目录名或卷标语法不正确" class="header-anchor">#</a> 2，<em>vuepress</em>命令无法使用：文件名，目录名或卷标语法不正确</h3> <div class="language- extra-class"><pre class="language-text"><code>#原因：yarn目录和安装的模块不在相同的硬盘分区里导致的
+
+#查看yarn命令目录
+yarn global bin
+D:\Program Files\nodejs\node_global\bin
+
+#查看yarn全局安装位置（此处已修改，默认在C盘用户目录内）
+yarn global dir
+D:\Program Files\yarn\global
+
+#修改方法：修改yarn默认全局安装位置
+yarn config set global-folder &quot;D:\Program Files\yarn\global&quot;
+yarn config set cache-folder &quot;D:\Program Files\yarn\cache&quot;
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.bb8efc33.js" defer></script><script src="/assets/js/2.d04aa783.js" defer></script><script src="/assets/js/6.83ab510a.js" defer></script>
+  </body>
+</html>
