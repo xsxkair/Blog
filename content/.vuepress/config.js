@@ -1,6 +1,7 @@
 module.exports = {
     title: 'Hello VuePress',// 显示在左上角的网页名称以及首页在浏览器标签显示的title名称
     description: 'Just playing around', // meta 中的描述文字，用于SEO
+    //github仓库名称
     base: '/Blog/',
     themeConfig: {
         //导航栏的logo
@@ -9,8 +10,8 @@ module.exports = {
         //navbar: false,
         //导航栏链接
         nav: [
-            { text: 'Home', link: '/vuepress' },
-            { text: '百度', link: 'https://baidu.com' },
+            { text: 'vuepress', link: '/vuepress/' },
+            { text: '微信小程序', link: '/weispace/' },
             { text: 'Google', link: 'https://google.com' },
             {
                 text: '链接下拉',
@@ -32,11 +33,27 @@ module.exports = {
         //侧边栏配置
         //想要使 侧边栏（Sidebar）生效，需要配置 themeConfig.sidebar，基本的配置，需要一个包含了多个链接的数组
         //首页是不显示侧边栏的
-        sidebar: [
-            '/',
-            '/vuepress',
-            ['/vuepress', 'Explicit link text']
-        ],
+        sidebar: {
+            '/vuepress/': [{
+                title: 'Help',
+                collapsable: false,
+                children: [
+                  '',
+                  'vuepress_install'
+                ]
+              }],
+              '/weispace/': [{
+                title: '微信小程序',
+                collapsable: false,
+                children: [
+                  '',
+                  'vuepress_install'
+                ]
+              }],
+            '/': [
+                '',        /* / */
+              ]
+        },
         //侧边栏标题级联深度，默认2，提起H1 H2的标题
         sidebarDepth: 2
     },

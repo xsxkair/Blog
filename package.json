@@ -4,7 +4,6 @@
   "description": "* 确认**nodejs**版本，版本大于8才可使用！",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vuepress dev content",
     "build": "vuepress build content"
   },

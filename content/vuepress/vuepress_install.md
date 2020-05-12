@@ -1,6 +1,4 @@
-# <center>vuepress 初体验</center>
-
-# 初次安装使用
+# vuepress 安装
 
 ## 安装
 
